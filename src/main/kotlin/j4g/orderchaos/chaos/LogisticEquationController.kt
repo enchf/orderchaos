@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 class LogisticEquationController {
 
     @GetMapping("/chaos")
-    fun plotLogisticEquation(@RequestParam r: Double,
+    fun plotLogisticEquation(@RequestParam ratio: Double,
                              @RequestParam x0: Double,
-                             @RequestParam iterations: Int) = LogisticEquation(r, x0).plot(iterations)
+                             @RequestParam iterations: Int) = LogisticEquation(ratio, x0).plot(iterations)
 }
