@@ -27,9 +27,13 @@ function updatePlot() {
 
 function updatePlotCallback(data) {
     var labels = [...data.keys()];
+    var ratio = $('#ratio').val();
+    var x0 = $('#x0').val();
+    var datasetLabel = 'Population over time with ratio ' + ratio +
+                       ' and x0 = ' + x0 + ' for ' + data.length + ' iterations.';
     var chartData = {
         labels: labels,
-        datasets: [{ label: 'Population ratio over time', data: data,
+        datasets: [{ label: datasetLabel, data: data,
                      borderColor: 'rgb(255, 99, 132)',
                      backgroundColor: 'rgb(255, 99, 132, 0.5)' }]
     };
